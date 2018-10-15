@@ -1,0 +1,23 @@
+{% extends "primiray/base.html" %}
+
+
+
+{% block title %} {{item.title }} {% endblock%}
+{% block content %}
+    {% for item in articles %}
+    the A you read is wirted by  {{item.author }}
+      <br>   {{ item.create_time }}
+    <p>
+   <pre>  body   {{ item.body }}   </pre>
+    </p>
+    <h4> coment area</h4>
+       {% for com in comment %}
+            {{ com.name }}  ---{{ com.email }}
+            <br>
+  <pre>           {{ com.body }}  </pre>
+
+            <hr>
+            {% endfor %}
+{% endfor %}
+{% endblock %}
+

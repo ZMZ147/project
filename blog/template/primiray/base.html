@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} tilte{% endblock %} </title>
+</head>
+<body>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+<p>  please connect to us </p>
+</div>
+{#in the same dirctory, you can set css img ,some element in the main page#}
+</body>
+</html>

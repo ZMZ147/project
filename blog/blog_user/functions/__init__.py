@@ -1,0 +1,1 @@
+from blog_user.functions import views
