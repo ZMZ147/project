@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/../blog/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../blog/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../blog/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../blog/blog/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../blog/blog/settings.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../blog/blog/urls.py" beforeDir="false" />
@@ -221,7 +220,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/user_login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
+            <state relative-caret-position="457">
               <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
@@ -344,17 +343,6 @@
               <item name="task" type="b2602c69:ProjectViewProjectNode" />
               <item name="task" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="task" type="b2602c69:ProjectViewProjectNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="task" type="b2602c69:ProjectViewProjectNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -469,7 +457,7 @@
   <component name="ToolWindowManager">
     <frame x="68" y="-11" width="1213" height="780" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22326775" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22326775" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -483,7 +471,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.21417566" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.21417566" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32973805" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -790,7 +778,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/user_login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
+        <state relative-caret-position="457">
           <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
