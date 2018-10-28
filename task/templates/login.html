@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<form action="{% url 'taskuser:login' %}"  method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+{#    这里如何加入　验证码区域　　#}
+    <img src="{% url 'taskuser:check_code' %}"  id="img">
+    <input type="submit" value="登录">
+</form>
+
+
+<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+<script>
+
+      $('#img').click(function () {
+          $("#img").attr('src','{% url 'taskuser:check_code' %}?ran='+Math.random());
+          {#$.ajax({#}
+          {#    url:"{% url 'taskuser:check_code' %}",#}
+          {#    type:'GET',#}
+          {#    success: function (data) {#}
+          {#        alert(typeof (data));#}
+          {#        $('#img').attr("src", data)#}
+          {##}
+          {#            }#}
+          {##}
+          {#    })#}
+          {##}
+          } );
+
+
+
+
+
+</script>
+</body>
+</html>

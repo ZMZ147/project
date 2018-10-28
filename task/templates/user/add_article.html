@@ -1,0 +1,42 @@
+{% extends 'user/user_index.html' %}
+{% block lever %}
+    <div id="special">
+    <form action="{% url 'taskarticle:add' %}" method="post">
+    {% csrf_token %}
+    <br>
+        文章标签：  <input type="hidden" name="hidTags" id="hidTags" value="" style="width: 60px " placeholder="后面 还应该跟着 一个那中删除的图片">  <button  >标签</button>
+
+    {{ form.as_p }}
+
+
+        <input type="submit" value="发表">
+
+        <br>
+
+    </form>
+</div>
+
+    <script type="text/javascript"  src=" ../../static/js/jquery.min.js"></script>
+    <script>
+{#可以实现#}
+{#    function add_tag() {#}
+{#    $("#hidTags").prop('type','text');#}
+{##}
+$(document).ready(function(){
+  $("button").on("click",function(){
+        $('input[type="hidden"]').last().prop('type','text');
+      {#$("#hidTags").last().prop('type','text');#}
+      {#  删除前一个标签#}
+      $('button').before('删除');
+     {#这里 怎么 实现 不了 #}
+       $('button').before('<input type="hidden" name="hidTags" id="hidTags" value="" style="width: 60px " >');
+      window.location.load();
+
+
+  });
+});
+
+</script>
+
+
+{% endblock %}

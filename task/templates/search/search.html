@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+{% block left %}
+    <form action="{% url 'haystack_search' %}">
+     <input id="unit" type="search" name="q" placeholder="搜索">
+    <input type="submit" value="收缩">
+</form>
+
+{% if query %}
+  <h3>搜索结果如下：</h3>
+  {% for result in page.object_list %}
+    <a href="{{ result.object.id }}"  >{{ result.object.gName }}</a><br/>
+      {{ result.title }}---&nbsp;{{ result.time }}---{{ result.author | lower }}
+      <br>
+      {{ result.content }}
+      <br>
+      <hr>
+  {% empty %}
+    <p>啥也没找到</p>
+  {% endfor %}
+
+  {% if page.has_previous or page.has_next %}
+    <div>
+      {% if page.has_previous %}<a href="?q={{ query }}&page={{ page.previous_page_number }}" rel="external nofollow" >{% endif %}« 上一页{% if page.has_previous %}</a>{% endif %}
+    |
+      {% if page.has_next %}<a href="?q={{ query }}&page={{ page.next_page_number }}" rel="external nofollow" >{% endif %}下一页 »{% if page.has_next %}</a>{% endif %}
+    </div>
+  {% endif %}
+{% endif %}
+
+{#        <form action="." method="get">#}
+{#        {{ form.as_p }}#}
+{#        <input type="submit" value="Search">#}
+{#    </form>#}
+{#    下面　　这个　　是　自己　新建的　　#}
+
+
+
+{% endblock %}
+
+{#model  templates 都写好了  还有 就是  #}
+

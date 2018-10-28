@@ -1,0 +1,64 @@
+{% extends 'user/user_index.html' %}
+{% load staticfiles %}
+{% block left %}
+
+{#    拿到 文章#}
+    <div  id="article">
+    {{ article.title }}
+    &nbsp:{{ article.add_time }}<br>
+    {{ article.content }}]
+    </div>
+    <hr>
+    <br>
+    <button onclick="like({{ article.id }})">like: </button><input type="text" id='dianzan' style="width: 20px" value="{{ article.love_num }}">
+{#    添加评论#}
+    <div  id="comment">
+{#    我添加评论之后   还是要 返回这个  界面的 #}
+    <form action="{% url 'taskarticle:get' %}?id={{ article.id }}" method="post">
+        {% csrf_token %}
+        <br>
+        {{ form.as_p }}
+        <input type="submit" value="评论">
+    </form>
+
+    </div>
+
+{#    拿到评论列表#}
+    <div  id="comment_list">
+    {% for item in article.comment_set.all %}
+        {{ item.author }}--{{ item.time }}
+        <br>
+     <pre>          </pre>   {{ item.content }}
+        <br>
+        <br>
+        <hr>
+
+    {% endfor %}
+    </div>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script>
+
+        {#$('button').click(function () {#}
+          function like(obj) {
+              $.ajax(
+                  {
+                      url: 'dianzan',
+                      type: 'GET',
+                      data: {
+                            'id':obj},
+                      success: function (data) {
+
+                          $('#dianzan').attr("value",data);
+
+                          {#window.location.reload();#}
+
+                      }
+                  }
+              )
+          }
+
+
+
+
+    </script>
+{% endblock %}
